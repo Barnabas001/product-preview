@@ -1,0 +1,105 @@
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Lexend Deca, sans-serif;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: 50px 10px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+
+    .sedans-container {
+      border-radius: 10px 0 0 10px;
+    }
+
+    .luxury-container {
+      border-radius: 0 10px 10px 0;
+    }
+  }
+}
+
+.content {
+  padding: 4rem;
+}
+
+.header {
+  font-size: 1.5rem;
+}
+
+.text {
+  font-size: 1rem;
+  color: rgb(238, 216, 216);
+}
+
+.sedans-container {
+  background-color: hsl(31, 77%, 52%);
+  color: white;
+  border-radius: 10px 10px 0 0;
+}
+
+.suvs-container {
+  background-color: hsl(184, 100%, 22%);
+  color: white;
+}
+
+.luxury-container {
+  background-color: hsl(179, 100%, 13%);
+  color: white;
+  border-radius: 0 0 10px 10px;
+}
+
+button {
+  display: block;
+  margin-top: 3rem;
+  padding: 10px 18px;
+  background-color: white;
+
+  border: solid 1px white;
+  border-radius: 30px;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+/* @media (min-width: 1024px) {
+  .container {
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 50px auto;
+    max-width: 1200px;
+  }
+} */
+
+.sedans-container button {
+  color: hsl(31, 77%, 52%);
+}
+
+.suvs-container button {
+  color: hsl(184, 100%, 22%);
+}
+
+.luxury-container button {
+  color: hsl(179, 100%, 13%);
+}
+
+button:hover {
+  background-color: transparent;
+  color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 40px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
